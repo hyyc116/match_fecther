@@ -111,7 +111,7 @@ def iter_fetch_seq(seq_num=None):
 
         matches.extend(lines)
 
-        if len(matches)>10000:
+        if len(matches)>1000:
             open('matches.txt','a').write('\n'.join(matches)+'\n')
             open('latest_seqnum.txt','a').write('{}\n'.format(seq_num))
 
