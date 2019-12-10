@@ -104,7 +104,7 @@ def iter_fetch_seq(seq_num=None):
 
         progress+=1
 
-        if progress%1==0:
+        if progress%100==0:
 
             print('progress {}, seq num:{}, time:{}, {} matches crawed ..'.format(progress,seq_num,dt,count))
 
@@ -118,7 +118,7 @@ def iter_fetch_seq(seq_num=None):
             count+=len(matches)
             matches=[]
 
-        time.sleep(1)
+        time.sleep(10)
 
     if len(matches)>0:
         open('matches.txt','a').write('\n'.join(matches)+'\n')
