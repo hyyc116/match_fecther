@@ -118,9 +118,9 @@ def iter_fetch_seq(seq_num=None):
             count+=len(matches)
             matches=[]
 
-            time.sleep(10)
+            time.sleep(60)
 
-        time.sleep(5)
+        time.sleep(15)
 
     if len(matches)>0:
         open('matches.txt','a').write('\n'.join(matches)+'\n')
